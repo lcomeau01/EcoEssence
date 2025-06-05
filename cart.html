@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name = "keywords" content = "sustainable, clothing, environment, ecoessence, shop" />
+        <title>EcoEssense</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            #continue, #continue:visited {
+                background-color: #53774c;
+                margin-top: 5vh;
+                text-align: center;
+                border: 3px outset #82653E;
+                border-radius: 20px 20px 20px 20px;
+                padding: 7px;
+                text-decoration: none;
+                color: black;
+            }
+            #continue:hover, #continue:visited:hover {
+                text-decoration: underline;
+                text-decoration-color: #bc9c54;
+                color: #bc9c54;
+            }
+            #purchase {
+                background-color: #53774c;
+                text-align: center;
+                border: 3px outset #82653E;
+                border-radius: 20px 20px 20px 20px;
+                padding: 7px;
+                text-decoration: none;
+                color: black;
+            }
+            #purchase:hover {
+                text-decoration: underline;
+                text-decoration-color: #bc9c54;
+                color: #bc9c54;
+            }
+                                        @media only screen and (max-width:600px) {
+               .button {height:40px !important; font-size:15px !important; position:relative !important; width:31% !important; display:inline !important}
+               .button {padding-top:3% !important;}
+               .logo {width:96.2% !important; margin-left:1.8%;}
+               .button:first-child {top:0 !important; margin-top:0 !important}
+               .content {height:145vh !important; }
+               .navigation {top:0 !important; margin-left:1.75%}
+            }
+        </style>
+    </head>
+    <body>
+        <a href = "about.html"><div class = "logo"></div></a>
+        <div class = "navigation">
+            <div class = "button">
+                <a href = "about.html" class = "navlinks">About</a>
+            </div>
+            <div class = "button">
+                <a href = "mission.html" class = "navlinks">Mission</a>
+            </div>
+            <div class = "button">
+                <a href = "team.html" class = "navlinks">Team</a>
+            </div>
+            <div class = "button">
+                <a href = "locations.html" class = "navlinks">Locations</a>
+            </div>
+            <div class = "button">
+                <a href = "shop.html" class = "navlinks">Shop</a>
+            </div>
+            <div class = "button">
+                <a href = "contact.html" class = "navlinks">Contact</a>
+            </div>
+        </div>
+        <div class = "container">
+            <div class = "content">
+                <h1>Item Added to Cart!</h1>
+                <br />
+                <img src = "images/shoppingcart.png" width = 200vw height = 200vh />
+                <br />
+                <a href = "shop.html" id = "continue">Continue Shopping</a>
+                <br />
+                <p>
+                    <strong>Current Cart:</strong><br />
+                    <span id = "currentcart"></span>
+                    <br />
+                    <strong>Total: </strong><span id = "totalcartcost">$0</span>
+                </p>
+                <script>
+                    var currentcart = sessionStorage.getItem('itemsincart');
+                    var parsedcurrentcart = JSON.parse(currentcart);
+                    
+                    thetext = ""
+                    for (let i = 1; i < parsedcurrentcart.length; i++) {
+                        thetext += "" + parsedcurrentcart[i] + "<br />";
+                    }
+                    var currentcart = document.getElementById('currentcart');
+                    currentcart.innerHTML = thetext;
+                </script>
+                <script>
+                    var currenttotal = sessionStorage.getItem('carttotal');
+                    
+                    var total = document.getElementById('totalcartcost');
+                    total.textContent = "$" + currenttotal;
+                </script>
+                <a href="order.html">
+                    <button id = "purchase">Purchase</button>
+                </a>
+                <script>
+                    var purchase = document.getElementById('purchase');
+                    
+                    purchase.addEventListener('click', function() {
+                        
+                        var currenttotal = document.getElementById('totalcartcost');
+                        currenttotal.textContent = "$0";
+                        sessionStorage.setItem('carttotal', 0);
+                        
+                        var currentcart = document.getElementById('currentcart');
+                        currentcart.innerHTML = "";
+                        sessionStorage.setItem('itemsincart', JSON.stringify(['something']));
+    
+                        
+                    })
+                </script>
+            </div>
+            <div class = "footer">
+                <p id = "footertext">
+                    Est. 2024 <br />
+                    Connect on <a href = "https://www.instagram.com" target = "_blank">Instagram</a> | <a href = "https://twitter.com/?lang=en" target = "_blank">X</a> | <a href = "https://www.facebook.com" target = "_blank">Facebook</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name = "keywords" content = "sustainable, clothing, environment, ecoessence, shop" />
+        <title>EcoEssense</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            body { 
+                max-width: 100%;
+                /* margin-left: 0px;  */
+                /* margin-right: 0px; */
+            }
+            .content { 
+                display: flex; 
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                max-width: 100%;
+            }
+            form { 
+                width: 80%; 
+                height: 95%; 
+                border: outset #FFFFFF 5px; 
+                border-radius: 20px;
+                background-color:  #82653E;
+                display: flex; 
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-top:10px;
+            }
+            .form-content { 
+                height: 100%; 
+                width: 100%; 
+                display: flex; 
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            h2 { 
+                color: white; 
+            }
+            .parts {
+                display: flex;
+                flex-direction: column;
+                width: 50%; 
+            }
+            .parts2 { 
+                display: flex;
+                justify-content: space-between;
+                width: 50%; 
+            }
+            input { 
+                border-radius: 5px;
+            }
+            label { 
+                color: #DADADA; 
+                width: 100%;
+                display: flex; 
+                justify-content: end;
+                font-size: small;
+                margin-bottom: 0px;
+            }
+            h2 { 
+                margin: 2px; 
+            }
+            a { 
+                margin-top: 5px; 
+            }
+            @media only screen and (max-width: 600px) { 
+                .container { 
+                    bottom: 0px !important; 
+                }
+            }
+            @media only screen and (max-width: 500px) { 
+                form { 
+                    width: 90%; 
+                }
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 style="padding-top:60px"> Order Form </h1>
+            <form onsubmit= "return validate()" method="get" action="#" id="order">
+                <div class="form-content">
+                    <h2> Contact Details </h2>
+                    <div class="parts2">
+                        <div class="parts">
+                            <input type="text" name="fname">
+                            <label for="fname" id="fname"> First Name* </label>
+                        </div>
+                        <div class="parts"> 
+                            <input type="text" name="lname">
+                            <label for="lname" id="lname"> Last Name*</label>
+                        </div>
+                    </div>
+                    <div class="parts">
+                        <input type="tel" placeholder="555-555-5555" id="phoneinput" name="number">
+                        <label for="number" id="number">Phone Number</label>
+                    </div>
+                    <div class="parts">
+                        <input type="email" placeholder="email@EcoEssence.org" id="emailinput" name="address">
+                        <label for="address" id="address"> Email Address*</label>
+                    </div>
+                    <h2> Billing Address </h2>
+                    <div class="parts">
+                        <input type="text" name="street1">
+                        <label for="street1" id="street1"> Street Address* </label>
+                    </div>
+                    <div class="parts">
+                        <input type="text" id="street2" name="street2">
+                        <label for="street2" id="street2"> Street Address Line 2 </label>
+                    </div>
+                    <div class="parts2">
+                        <div class="parts">
+                            <input type="text" name="city">
+                            <label for="city" id="city"> City* </label>
+                        </div>
+                        <div class="parts">
+                            <input type="text" name="State">
+                            <label for="State" id="State"> State / Province* </label>
+                        </div>
+                    </div>
+                    <div class="parts2">
+                        <div class="parts">
+                            <input type="text" name="zip">
+                            <label for="zip" id="zip"> Zip Code* </label>
+                        </div>
+                        <div class="parts">
+                            <select size = '1' name = 'Country' id="country" > 
+                                <option> Select </option>
+                                <option>North America</option>
+                                <option>Canada</option>
+                                <option>Mexico</option>
+                            </select>
+                            <label for="Country" id="countryLabel"> Country* </label>
+                        </div>
+                    </div>
+                    <h2> Card Information </h2>
+                    <div class="parts2">
+                        <div class="parts">
+                            <input type="text" name="fname2">
+                            <label for="fname2" id="fname2"> First Name* </label>
+                        </div>
+                        <div class="parts"> 
+                            <input type="text" name="lname2">
+                            <label for="lname2" id="lname2"> Last Name* </label>
+                        </div>
+                    </div>
+                    <div class="parts">
+                        <input type="password" name="card">
+                        <label for="card" id="card"> Card Number* </label>
+                    </div>
+                    <div class="parts">
+                        <input type="password" name="security">
+                        <label for="security" id="security"> Security Code* </label>
+                    </div>
+                    <div class="parts">
+                        <input type="month" name="month">
+                        <label for="month" id="month"> Expiration Date* </label>
+                    </div>
+                    <div class="parts2">
+                        <input type="reset" id="reset">
+                        <input type="submit" value="Purchase" id="buy">
+                    </div>
+                    
+                </div>
+    
+            </form>
+            <a href="about.html" style="padding-top:20px"> Back </a>
+        </div>
+
+        
+    </div>
+    
+    <!-- FORM VALIDATION -->
+    <script>
+        function validate() { 
+            valid = true; 
+
+            // FIRST NAME CONTACT
+            fname = document.getElementsByName("fname")[0].value; 
+            flabel = document.getElementById("fname"); 
+            if (fname == "") { 
+                flabel.innerText = "First Name Required"
+                flabel.style.color = "red"; 
+                valid = false; 
+            }
+            else { 
+                flabel.innerText = "First Name*"
+                flabel.style.color = "#DADADA"; 
+            }
+
+            // LAST NAME CONTACT
+            lname = document.getElementsByName("lname")[0].value; 
+            llabel = document.getElementById("lname"); 
+            if (lname == "") { 
+                llabel.innerText = "Last Name Required"
+                llabel.style.color = "red"; 
+                valid = false; 
+            }
+            else { 
+                llabel.innerText = "Last Name*"
+                llabel.style.color = "#DADADA"; 
+            }
+
+            // EMAIL CONTACT
+            email = document.getElementsByName("address")[0].value; 
+            maillabel = document.getElementById("address"); 
+            if (email == "") { 
+                maillabel.innerText = "Email Required"
+                maillabel.style.color = "red"; 
+                valid = false; 
+            }
+            else { 
+                maillabel.innerText = "Email Address*"
+                maillabel.style.color = "#DADADA"; 
+            }
+
+            // STREET ADDRESS
+            street = document.getElementsByName("street1")[0].value; 
+            stlabel = document.getElementById("street1"); 
+            if (street == "") { 
+                stlabel.innerText = "Street Address Required"
+                stlabel.style.color = "red"; 
+                valid = false; 
+            }
+            else { 
+                stlabel.innerText = "Street Address*"
+                stlabel.style.color = "#DADADA"; 
+            }
+
+            // CITY ADDRESS
+            city = document.getElementsByName("city")[0].value; 
+            clabel = document.getElementById("city"); 
+            if (city == "") { 
+                clabel.innerText = "City Required"
+                clabel.style.color = "red"; 
+                valid = false; 
+            }
+            else { 
+                clabel.innerText = "City*"
+                clabel.style.color = "#DADADA"; 
+            }
+
+            // STATE ADDRESS
+            state = document.getElementsByName("State")[0].value; 
+            statelabel = document.getElementById("State"); 
+            if (state == "") { 
+                statelabel.innerText = "State Required"
+                statelabel.style.color = "red"; 
+                valid = false; 
+            }
+            else { 
+                statelabel.innerText = "State / Province*"
+                statelabel.style.color = "#DADADA"; 
+            }
+
+            // ZIP CODE ADDRESS
+            zip = document.getElementsByName("zip")[0].value; 
+            ziplabel = document.getElementById("zip"); 
+            if (zip == "") { 
+                ziplabel.innerText = "Zip Code Required"
+                ziplabel.style.color = "red"; 
+                valid = false; 
+            }
+            else { 
+                ziplabel.innerText = "Zip Code*"
+                ziplabel.style.color = "#DADADA"; 
+            }
+
+            // COUNTRY ADDRESS
+            country = document.getElementById("country"); 
+            selectedCountry = country.selectedIndex; 
+            countrylabel = document.getElementById("countryLabel"); 
+            if (selectedCountry == 0) { 
+                countrylabel.innerText = "Country Required"
+                countrylabel.style.color = "red"; 
+                valid = false; 
+            }
+            else { 
+                countrylabel.innerText = "Country*"
+                countrylabel.style.color = "#DADADA"; 
+            }
+
+            // FIRST NAME CARD
+            fname2 = document.getElementsByName("fname2")[0].value; 
+            flabel2 = document.getElementById("fname2"); 
+            if (fname2 == "") { 
+                flabel2.innerText = "First Name Required"
+                flabel2.style.color = "red"; 
+                valid = false; 
+            }
+            else { 
+                flabel2.innerText = "First Name*"
+                flabel2.style.color = "#DADADA"; 
+            }
+
+            // LAST NAME CARD
+            lname2 = document.getElementsByName("lname2")[0].value; 
+            llabel2 = document.getElementById("lname2"); 
+            if (lname2 == "") { 
+                llabel2.innerText = "Last Name Required"
+                llabel2.style.color = "red"; 
+                valid = false; 
+            }
+            else { 
+                llabel2.innerText = "Last Name*"
+                llabel2.style.color = "#DADADA"; 
+            }
+
+            // CARD NUMBER CARD
+            card = document.getElementsByName("card")[0].value; 
+            cardlabel = document.getElementById("card"); 
+            if (card == "" || card.length != 16) { 
+                cardlabel.innerText = "Card Number Required"
+                cardlabel.style.color = "red"; 
+                valid = false; 
+            }
+            else { 
+                cardlabel.innerText = "Card Number*"
+                cardlabel.style.color = "#DADADA"; 
+            }
+
+            // SECURITY NUMBER CARD
+            security = document.getElementsByName("security")[0].value; 
+            seclabel = document.getElementById("security"); 
+            if ((security == "") || (security.length != 3)) { 
+                seclabel.innerText = "Security Code Required"
+                seclabel.style.color = "red"; 
+                valid = false; 
+            }
+            else { 
+                seclabel.innerText = "Security Code*"
+                seclabel.style.color = "#DADADA"; 
+            }
+
+            // EXP DATE CARD
+            exp = document.getElementsByName("month")[0].value; 
+            explabel = document.getElementById("month"); 
+            if (exp == "") { 
+                explabel.innerText = "Expiration Date Required"
+                explabel.style.color = "red"; 
+                valid = false; 
+            }
+            else { 
+                explabel.innerText = "Expiration Date*"
+                explabel.style.color = "#DADADA"; 
+            }
+
+            if(valid) VALID(); 
+            return valid; 
+        }
+    </script>
+
+    <!-- WHEN THE PERCHACE BUTTON IS CLICKED, IT SENDS THE USER HOME -->
+    <script>
+
+        function VALID() { 
+            setTimeout(function() { 
+                alert("Thank You For Your Purchase! Returning to Home Page...");
+                window.location.href = "about.html"; 
+            }); 
+        }
+    </script>
+
+    <!-- RESET PRESSED -->
+    <script>
+        button = document.getElementById("reset"); 
+
+        button.onclick = function() { 
+            flabel.innerText = "First Name*"; 
+            flabel.style.color = "#DADADA"; 
+
+            llabel.innerText = "Last Name*"; 
+            llabel.style.color = "#DADADA";
+
+            maillabel.innerText = "Email Address*"
+            maillabel.style.color = "#DADADA"; 
+
+            stlabel.innerText = "Street Address*"
+            stlabel.style.color = "#DADADA"; 
+
+            clabel.innerText = "City*"
+            clabel.style.color = "#DADADA"; 
+
+            statelabel.innerText = "State / Province*"
+            statelabel.style.color = "#DADADA"; 
+
+            ziplabel.innerText = "Zip Code*"
+            ziplabel.style.color = "#DADADA"; 
+
+            countrylabel.innerText = "Country*"
+            countrylabel.style.color = "#DADADA"; 
+
+            flabel2.innerText = "First Name*"
+            flabel2.style.color = "#DADADA"; 
+
+            llabel2.innerText = "Last Name*"
+            llabel2.style.color = "#DADADA"; 
+
+            cardlabel.innerText = "Card Number*"
+            cardlabel.style.color = "#DADADA"; 
+
+            seclabel.innerText = "Security Code*"
+            seclabel.style.color = "#DADADA"; 
+
+            explabel.innerText = "Expiration Date*"
+            explabel.style.color = "#DADADA"; 
+        }; 
+    </script>
+</body>
+</html>

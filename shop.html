@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <title>EcoEssence</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name = "keywords" content = "sustainable, clothing, environment, ecoessence, shop" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EcoEssense</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+                #options {
+                        width: 20vw;
+                        height: 5vh;
+                        font-size: 100%;
+                        background-color: #53774c;
+                        text-align: center;
+                        border: 3px outset #82653E;
+                        border-radius: 20px 20px 20px 20px;
+                        color: black;
+                }
+                img {
+                        border: 3px outset #82653E; 
+                        border-radius: 20px 20px 20px 20px;
+                }
+                tr {
+                        text-align: center;
+                }
+                table {
+                        margin-top: 5vh;
+                        margin-left: auto;
+                        margin-right: auto;
+                }
+            @media only screen and (max-width: 600px) { 
+                #options {
+                    width: 40vw;
+                    color: black;
+                }
+                img {
+                    width: 30vw;
+                    height: 30vh;
+                }
+                div.footer {
+                    bottom: 0vh;
+                }
+            }
+                                        @media only screen and (max-width:600px) {
+               .button {height:40px !important; font-size:15px !important; position:relative !important; width:31% !important; display:inline !important}
+               .button {padding-top:3% !important;}
+               .logo {width:96.2% !important; margin-left:1.8%;}
+               .button:first-child {top:0 !important; margin-top:0 !important}
+               .content {height:135vh !important; }
+               .navigation {top:0 !important; margin-left:1.75%}
+            }
+        </style>
+    </head>
+    <body>
+        <a href = "about.html"><div class = "logo"></div></a>
+        <div class = "navigation">
+            <div class = "button">
+                <a href = "about.html" class = "navlinks">About</a>
+            </div>
+            <div class = "button">
+                <a href = "mission.html" class = "navlinks">Mission</a>
+            </div>
+            <div class = "button">
+                <a href = "team.html" class = "navlinks">Team</a>
+            </div>
+            <div class = "button">
+                <a href = "locations.html" class = "navlinks">Locations</a>
+            </div>
+            <div class = "active2 button">
+                <a href = "shop.html" class = "active navlinks">Shop</a>
+            </div>
+            <div class = "button">
+                <a href = "contact.html" class = "navlinks">Contact</a>
+            </div>
+        </div>
+        <div class = "container">
+            <div class = "content"  style="padding-bottom:100px !important">
+                <h1>Shop EcoEssence</h1>
+                <select id = "options">
+                    <option value = "mens">Mens Apparel</option>
+                    <option value = "womens">Womens Apparel</option>
+                    <option value = "children">Childrens Apparel</option>
+                </select>
+                <div id = "table"><table id = "items" style="margin-bottom:10px">
+                    <tr>
+                        <td>
+                            <img src = "images/mensshirt.jpg" width = 300vw height = 400vh />
+                        </td>
+                        <td>
+                            <img src = "images/menspants.jpg" width = 300vw height = 400vh />
+                        </td>
+                        <td>
+                            <img src = "images/mensjacket.jpg" width = 300vw height = 400vh />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Shirt - $50</td>
+                        <td>Pants - $60</td>
+                        <td>Jacket - $110</td>
+                    </tr>
+                    <tr>
+                        <td><a href = 'cart.html' class = "tp" id = "XS Mens Shirt">XS</a> | <a href = 'cart.html' class = "tp" id = "S Mens Shirt">S</a> | <a href = 'cart.html' class = "tp" id = "M Mens Shirt">M</a> | <a href = 'cart.html' class = "tp" id = "L Mens Shirt">L</a> | <a href = 'cart.html' class = "tp" id = "XL Mens Shirt">XL</a></td>
+                        <td><a href = 'cart.html' class = "tp" id = "XS Mens Pants">XS</a> | <a href = 'cart.html' class = "tp" id = "S Mens Pants">S</a> | <a href = 'cart.html' class = "tp" id = "M Mens Pants">M</a> | <a href = 'cart.html' class = "tp" id = "L Mens Pants">L</a> | <a href = 'cart.html' class = "tp" id = "XL Mens Pants">XL</a></td>
+                        <td><a href = 'cart.html' class = "tp" id = "XS Mens Jacket">XS</a> | <a href = 'cart.html' class = "tp" id = "S Mens Jacket">S</a> | <a href = 'cart.html' class = "tp" id = "M Mens Jacket">M</a> | <a href = 'cart.html' class = "tp" id = "L Mens Jacket">L</a> | <a href = 'cart.html' class = "tp" id = "XL Mens Jacket">XL</a></td>
+                    </tr>
+                </table></div>
+                <script>
+                    var dropdown = document.getElementById("options");
+                
+                    var images = {'men': "<table id = 'items'><tr><td><img src = 'images/mensshirt.jpg' width = 300vw height = 400vh /></td><td><img src = 'images/menspants.jpg' width = 300vw height = 400vh /></td><td><img src = 'images/mensjacket.jpg' width = 300vw height = 400vh /></td></tr><tr><td>Shirt - $50</td><td>Pants - $60</td><td>Jacket - $110</td></tr><tr><td><a href = 'cart.html' class = 'tp' id = 'XS Mens Shirt'>XS</a> | <a href = 'cart.html' class = 'tp' id = 'S Mens Shirt'>S</a> | <a href = 'cart.html' class = 'tp' id = 'M Mens Shirt'>M</a> | <a href = 'cart.html' class = 'tp' id = 'L Mens Shirt'>L</a> | <a href = 'cart.html' class = 'tp' id = 'XL Mens Shirt'>XL</a></td><td><a href = 'cart.html' id = 'XS Mens Pants'>XS</a> | <a href = 'cart.html' class = 'tp' id = 'S Mens Pants'>S</a> | <a href = 'cart.html' class = 'tp' id = 'M Mens Pants'>M</a> | <a href = 'cart.html' class = 'tp' id = 'L Mens Pants'>L</a> | <a href = 'cart.html' class = 'tp' id = 'XL Mens Pants'>XL</a></td><td><a href = 'cart.html' id = 'XS Mens Jacket'>XS</a> | <a href = 'cart.html' class = 'tp' id = 'S Mens Jacket'>S</a> | <a href = 'cart.html' class = 'tp' id = 'M Mens Jacket'>M</a> | <a href = 'cart.html' class = 'tp' id = 'L Mens Jacket'>L</a> | <a href = 'cart.html' class = 'tp' id = 'XL Mens Jacket'>XL</a></td></tr></table>", 'women': "<table id = 'items'><tr><td><img src = 'images/womensshirt.jpg' width = 300vw height = 400vh /></td><td><img src = 'images/womenspants.jpg' width = 300vw height = 400vh /></td><td><img src = 'images/womensjacket.jpg' width = 300vw height = 400vh /></td></tr><tr><td>Shirt - $60</td><td>Pants - $75</td><td>Jacket - $140</td></tr><tr><td><a href = 'cart.html' class = 'tp' id = 'XS Womens Shirt'>XS</a> | <a href = 'cart.html' class = 'tp' id = 'S Womens Shirt'>S</a> | <a href = 'cart.html' class = 'tp' id = 'M Womens Shirt'>M</a> | <a href = 'cart.html' class = 'tp' id = 'L Womens Shirt'>L</a> | <a href = 'cart.html' class = 'tp' id = 'XL Womens Shirt'>XL</a></td><td><a href = 'cart.html' class = 'tp' id = 'XS Womens Pants'>XS</a> | <a href = 'cart.html' class = 'tp' id = 'S Womens Pants'>S</a> | <a href = 'cart.html' class = 'tp' id = 'M Womens Pants'>M</a> | <a href = 'cart.html' class = 'tp' id = 'L Womens Pants'>L</a> | <a href = 'cart.html' class = 'tp' id = 'XL Womens Pants'>XL</a></td><td><a href = 'cart.html' class = 'tp' id = 'XS Womens Jacket'>XS</a> | <a href = 'cart.html' class = 'tp' id = 'S Womens Jacket'>S</a> | <a href = 'cart.html' class = 'tp' id = 'M Womens Jacket'>M</a> | <a href = 'cart.html' class = 'tp' id = 'L Womens Jacket'>L</a> | <a href = 'cart.html' class = 'tp' id = 'XL Womens Jacket'>XL</a></td></tr></table>", 'kid': "<table id = 'items'><tr><td><img src = 'images/kidsshirt.jpg' width = 300vw height = 400vh /></td><td><img src = 'images/kidspants.jpg' width = 300vw height = 400vh /></td><td><img src = 'images/kidsjacket.jpg' width = 300vw height = 400vh /></td></tr><tr><td>Shirt - $30</td><td>Pants - $35</td><td>Jacket - $50</td></tr><tr><td><a href = 'cart.html' class = 'tp' id = 'XS Kids Shirt'>XS</a> | <a href = 'cart.html' class = 'tp' id = 'S Kids Shirt'>S</a> | <a href = 'cart.html' class = 'tp' id = 'M Kids Shirt'>M</a> | <a href = 'cart.html' class = 'tp' id = 'L Kids Shirt'>L</a> | <a href = 'cart.html' class = 'tp' id = 'XL Kids Shirt'>XL</a></td><td><a href = 'cart.html' class = 'tp' id = 'XS Kids Pants'>XS</a> | <a href = 'cart.html' class = 'tp' id = 'S Kids Pants'>S</a> | <a href = 'cart.html' class = 'tp' id = 'M Kids Pants'>M</a> | <a href = 'cart.html' class = 'tp' id = 'L Kids Pants'>L</a> | <a href = 'cart.html' class = 'tp' id = 'XL Kids Pants'>XL</a></td><td><a href = 'cart.html' class = 'tp' id = 'XS Kids Jacket'>XS</a> | <a href = 'cart.html' class = 'tp' id = 'S Kids Jacket'>S</a> | <a href = 'cart.html' class = 'tp' id = 'M Kids Jacket'>M</a> | <a href = 'cart.html' class = 'tp' 'L Kids Jacket'>L</a> | <a href = 'cart.html' class = 'tp' id = 'XL Kids Jacket'>XL</a></td></tr></table>"};
+                
+                    dropdown.addEventListener('change', function(event) {
+                        var chosen = dropdown.value;
+                        var display = document.getElementById("table");
+                    
+                        if (chosen == 'mens') {
+                            display.innerHTML = images['men'];
+                        }
+                        if (chosen == 'womens') {
+                            display.innerHTML = images['women'];
+                        }
+                        if (chosen == 'children') {
+                            display.innerHTML = images['kid'];
+                        }
+                    });
+                    
+            </script>
+            <script>
+                if (sessionStorage.getItem('itemsincart') == null) {
+                    var emptyarr = JSON.stringify(['something']);
+                    sessionStorage.setItem('itemsincart', emptyarr);
+                }
+                if (sessionStorage.getItem('carttotal') == null) {
+                    var total = 0;
+                    sessionStorage.setItem('carttotal', total);
+                }
+                
+                var table = document.getElementById('table');
+                var associatedPrices = {'XS Mens Shirt': 50, 'S Mens Shirt': 50, 'M Mens Shirt': 50, 'L Mens Shirt': 50, 'XL Mens Shirt': 50, 'XS Mens Pants': 60, 'S Mens Pants': 60, 'M Mens Pants': 60, 'L Mens Pants': 60, 'XL Mens Pants': 60, 'XS Mens Jacket': 110, 'S Mens Jacket': 110, 'M Mens Jacket': 110, 'L Mens Jacket': 110, 'XL Mens Jacket': 110, 'XS Womens Shirt': 60, 'S Womens Shirt': 60, 'M Womens Shirt': 60, 'L Womens Shirt': 60, 'XL Womens Shirt': 60, 'XS Womens Pants': 75, 'S Womens Pants': 75, 'M Womens Pants': 75, 'L Womens Pants': 75, 'XL Womens Pants': 75, 'XS Womens Jacket': 140, 'S Womens Jacket': 140, 'M Womens Jacket': 140, 'L Womens Jacket': 140, 'XL Womens Jacket': 140, 'XS Kids Shirt': 30, 'S Kids Shirt': 30, 'M Kids Shirt': 30, 'L Kids Shirt': 30, 'XL Kids Shirt': 30, 'XS Kids Pants': 35, 'S Kids Pants': 35, 'M Kids Pants': 35, 'L Kids Pants': 35, 'XL Kids Pants': 35, 'XS Kids Jacket': 50, 'S Kids Jacket': 50, 'M Kids Jacket': 50, 'L Kids Jacket': 50, 'XL Kids Jacket': 50};
+
+                table.addEventListener('click', function(event) {
+                    var itemclicked = event.target;
+                    if (itemclicked.classList.contains("tp") || itemclicked.classList.contains('tp')) {
+                        var curr = sessionStorage.getItem('itemsincart');
+                        var currparsed = JSON.parse(curr);
+                        currparsed.push(itemclicked.id);
+                        sessionStorage.setItem('itemsincart', JSON.stringify(currparsed));
+                        
+                        var currtotal = sessionStorage.getItem('carttotal');
+                        currtotal = parseInt(currtotal) + associatedPrices[itemclicked.id];
+                        sessionStorage.setItem('carttotal', currtotal);
+                    }
+                })
+            </script>
+            </div>
+            <div class = "footer">
+                <p id = "footertext">
+                    Est. 2024 <br />
+                    Connect on <a href = "https://www.instagram.com" target = "_blank">Instagram</a> | <a href = "https://twitter.com/?lang=en" target = "_blank">X</a> | <a href = "https://www.facebook.com" target = "_blank">Facebook</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EcoEssence</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+                .content { 
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                }
+                .title { 
+                        display: flex; 
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                }
+
+                .inside {
+                    background-color:#53774c; 
+                    color:#FFFFFF; 
+                    margin:auto; 
+                    width:70%; 
+                    border:5px outset #82653E; 
+                    border-radius:20px; 
+                    margin-top:10px; 
+                    padding-bottom:0px; 
+                    height:300px}
+                .ims {
+                    height:220px; 
+                    width:200px; 
+                    margin-top:15px; 
+                    margin-left:30px; 
+                    margin-right:10px;
+                    border-radius:10px
+                }
+                .ims2 {
+                    height:220px; 
+                    width:200px; 
+                    margin-top:15px; 
+                    margin-right:30px; 
+                    border-radius:10px
+                }
+                #team {
+                    color:#000000; margin-bottom:0;
+                }
+                .socials {
+                    height:50px;
+                    width:50px;
+                    margin-top:20px
+                }
+                #founder_height {height:300px}
+
+                @media screen and (max-width:960px) {
+                    .inside {height:585px !important}   
+                }
+
+                @media screen and (max-width: 800px) {
+                    #resp {padding:0; width:70% !important; margin-left:15%; height:auto;}
+                    #align_resp {text-align:center}
+                    #founder_height {height:635px !important}
+            }
+                                        @media only screen and (max-width:600px) {
+               .button {height:40px !important; font-size:15px !important; position:relative !important; width:31% !important; display:inline !important}
+               .button {padding-top:3% !important;}
+               .logo {width:96.2% !important; margin-left:1.8%;}
+               .button:first-child {top:0 !important; margin-top:0 !important}
+               .content {height:148vh !important; }
+               .navigation {top:0 !important; margin-left:1.75%}
+            }
+
+        </style>
+</head>
+<body>
+        <a href = "about.html"><div class = "logo"></div></a>
+        <div class = "navigation">
+            <div class = "button">
+                <a href = "about.html" class = "navlinks">About</a>
+            </div>
+            <div class = "button">
+                <a href = "mission.html" class = "navlinks">Mission</a>
+            </div>
+            <div class = "active2 button">
+                <a href = "team.html" class = "active navlinks">Team</a>
+            </div>
+            <div class = "button">
+                <a href = "locations.html" class = "navlinks">Locations</a>
+            </div>
+            <div class = "button">
+                <a href = "shop.html" class = "navlinks">Shop</a>
+            </div>
+            <div class = "button">
+                <a href = "contact.html" class = "navlinks">Contact</a>
+            </div>
+        </div>
+
+
+        <div class="container">
+        <div class="content">
+            <div style="text-align:center;"><h1 id="team">Meet the Team!</h1></div>
+                <div class="inside" id="founder_height">
+                    <div style="width:50%; float:left" id="resp"><img src="images/woman.jpg" style="margin-left:0" class="ims" ><h2>Founder, Emily Harper</h2></div>
+                    <div><img src="images/man.jpg" style="margin-left:0" class="ims"><h2>Founder, Alex Mitchell</h2></div>
+                </div>
+
+                <div class="inside">
+                  <img src="images/elizabeth.png" align='left' class="ims"  id="resp">
+                  <h2 id='align_resp' align='right' style="padding-top:25px; margin:auto; width:90%">Elizabeth is a senior studying Data Science at Tufts University. She is our e-commerce specialist and store manager. Her hometown is Baltimore, Maryland, and her favorite item is the men's jacket!
+                    <div id='align_resp' align="right">
+                        <a href = "https://www.instagram.com" target = "_blank"><img class="socials" src="images/insta.jpg"></a>
+                        <a href = "https://www.linkedin.com/" target = "_blank"><img class="socials" src="images/Screenshot 2024-03-05 101046.png"></a>
+                      </div></h2><br clear="all" />
+                </div>
+          
+                <div class="inside">
+                  <img src="images/lily.jpg" align='right' class="ims2" id="resp">
+                  <h2 id='align_resp' align='left' style="padding-top:35px; margin:auto; width:90%">Lily is a sophomore studying Computer Science at Tufts University. She is our designer and production manager. Her hometown is Gardner, MA, and her favorite item are the women's pants!
+                    <div id='align_resp' align="left">
+                        <a href = "https://www.instagram.com" target = "_blank"><img class="socials" src="images/insta.jpg"></a>
+                        <a href = "https://www.linkedin.com/" target = "_blank"><img class="socials" src="images/Screenshot 2024-03-05 101046.png"></a>
+                      </div></h2><br clear="all" />
+                </div>
+          
+                <div class="inside" style="margin-bottom:100px">
+                  <img src="images/rachel.png" align='left' class="ims" id="resp">
+                  <h2 id='align_resp' align='right' style="padding-top:5px; width:95%">Rachel is a senior studying Mechanical Engineering at Tufts University. She is our webmaster and social media manager. Her hometown is Medford, MA, and her favorite item is the women's jacket!
+                    <div id='align_resp' align="right">
+                        <a href = "https://www.instagram.com" target = "_blank"><img class="socials" src="images/insta.jpg"></a>
+                        <a href = "https://www.linkedin.com/" target = "_blank"><img class="socials" src="images/Screenshot 2024-03-05 101046.png"></a>
+                      </div></h2><br clear="all" />
+                </div>
+
+                </div>
+
+                <div class = "footer">
+                        <p id = "footertext">
+                            Est. 2024 <br />
+                            Connect on <a href = "https://www.instagram.com" target = "_blank">Instagram</a> | <a href = "https://twitter.com/?lang=en" target = "_blank">X</a> | <a href = "https://www.facebook.com" target = "_blank">Facebook</a>
+                        </p>
+                </div>
+        </div>
+</body>
+</html>

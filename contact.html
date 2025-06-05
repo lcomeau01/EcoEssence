@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+                .content { 
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                }
+                .title { 
+                        display: flex; 
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                }
+                .f {
+                    background-color:#82653E;
+                    width:100%;
+                    height:480px;
+                    border: 5px outset #FFFFFF;
+                    border-radius:20px;
+                    color:#FFFFFF;
+                }
+                h1, h3 {
+                    text-shadow: 1px 1px #000000;
+                }
+                #no_submit {
+                    color:#ff0000;
+                }
+                textarea {
+                    max-height:200px;
+                    max-width:300px;
+                    resize: horizontal;
+                }
+                @media screen and (max-width:425px) {
+                    .f {height:590px !important; max-width:94% !important;}   
+                }
+
+                            @media only screen and (max-width:600px) {
+               .button {height:40px !important; font-size:15px !important; position:relative !important; width:31% !important; display:inline !important}
+               .button {padding-top:3% !important;}
+               .logo {width:96.2% !important; margin-left:1.8%;}
+               .button:first-child {top:0 !important; margin-top:0 !important}
+               .content {height:145vh !important; }
+               .navigation {top:0 !important; margin-left:1.75%}
+            }
+
+
+        </style>
+</head>
+<body>
+        <a href = "about.html"><div class = "logo"></div></a>
+        <div class = "navigation">
+            <div class = "button">
+                <a href = "about.html" class = "navlinks">About</a>
+            </div>
+            <div class = "button">
+                <a href = "mission.html" class = "navlinks">Mission</a>
+            </div>
+            <div class = "button">
+                <a href = "team.html" class = "navlinks">Team</a>
+            </div>
+            <div class = "button">
+                <a href = "locations.html" class = "navlinks">Locations</a>
+            </div>
+            <div class = "button">
+                <a href = "shop.html" class = "navlinks">Shop</a>
+            </div>
+            <div class = "active2 button" >
+                <a href = "contact.html" class = "active navlinks">Contact</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+            <div style="padding-bottom:50px">
+            <div class="f">
+            <form align="center" onsubmit="return validate()" action='#' method='get'>
+                <h1 style="color:#FFFFFF; margin-bottom:10px">Contact Us!</h1>
+                <h2 style="margin-top:0; width:50%; margin-left:25%">Give us feedback and we will get back to you as soon as we can!</h2>
+                
+                <label>Name: </label><input type="text" name='name' id='name'>
+                <br/><br/>
+                
+                <label>Email: </label><input id="email_submission" type="text">
+                <br/><br/>
+                
+                <label>How did you hear about us? </label>
+                    <select name="hear">
+                    <option value="one">Social Media</option>
+                    <option value="two">From a Friend</option>
+                    <option value="three">YouTube Ad</option>
+                    <option value="four">Saw a Store</option></select>
+                <br/><br/>
+                
+                <label>Do you want to sign up for weekly emails? </label>
+                    <input type="radio" name="yesno" value="yes" style="margin:0; accent-color:#446032;">Yes
+                    <input type="radio" name="yesno" value="no" style="margin:0; accent-color:#446032;">No
+                <br/><br/>
+
+                <label>What do you want to see from us next? </label><input type="text" name='next' id='next'>
+                <br/><br/>
+                
+                <label>Anything else you'd like us to know? </label> <textarea type="text"></textarea>
+                <br/><br/>	
+                
+                <div align='center' style="padding-bottom:10px"><input id="submit" type = "submit" value = "Submit"></div>
+
+                <div id="no_submit"></div>
+            </form>
+            </div>
+            </div>
+                
+            <script>
+                function validate()
+                {
+                var valid = true; 
+                e_mail = '';
+                e_mail = document.getElementById("email_submission").value;
+                console.log(document.getElementById("email_submission").value)
+                if (e_mail == "") {
+                    document.getElementById('no_submit').innerHTML = "Please provide an email before submitting!";
+                    valid = false;
+                }
+                
+                else {
+                    document.getElementById('no_submit').innerHTML = '';
+                    l = e_mail.length;
+                    end = "end"
+
+                    if (l<4) {
+                        document.getElementById('no_submit').innerHTML = 'Sorry- that email is not valid.'
+                        valid = false; 
+                    }
+                    for (i=0; i<l; i++) {
+                        if (e_mail[i] == "@") {
+                            if (e_mail.substring(l-4, l) == ".com") {
+                                valid = true;
+                            }
+                            else {
+                                document.getElementById('no_submit').innerHTML = 'Sorry- that email is not valid.'
+                                valid = false;
+                            }
+                        }
+                    }
+                }
+
+                if (valid) {
+                    alert('Thank you for contacting us! We will get back to you shortly.');
+                    document.getElementById('no_submit').innerHTML = '';
+                }
+                return valid;
+            };
+            </script>
+
+        </div>
+        <div class = "footer">
+                <p id = "footertext">
+                    Est. 2024 <br />
+                    Connect on <a href = "https://www.instagram.com" target = "_blank">Instagram</a> | <a href = "https://twitter.com/?lang=en" target = "_blank">X</a> | <a href = "https://www.facebook.com" target = "_blank">Facebook</a>
+                </p>
+        </div>
+    </div>
+</body>
+</html>

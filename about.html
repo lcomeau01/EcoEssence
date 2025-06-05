@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name = "keywords" content = "sustainable, clothing, environment, ecoessence, shop" />
+        <title>EcoEssence</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+                .content { 
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                }
+                .title { 
+                        display: flex; 
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                }
+                img { 
+                        border: 5px solid #005701; 
+                        border-radius: 20px;
+                }
+                .About-statement {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        width: 80%;
+                        align-items: left;
+                        background-color: #3C602C;
+                        margin: 0 auto;
+                        border-radius: 20px;
+                        border:5px outset #82653E; 
+                }
+                @media only screen and (max-width: 1000px) {
+                    .About-statement { 
+                        flex-direction: column;
+                    }
+                    .About-statement img { 
+                        margin-bottom: 20px;
+                        margin-right: 0px;
+                    }
+                }
+                @media only screen and (max-width: 600px) { 
+                    .About-statement { 
+                        width: 95%; 
+                    }
+                }
+
+                @media only screen and (max-width: 425px)  { 
+                    .About-statement img { 
+                        max-width: 200px; 
+                        max-height: 200px; 
+                    }
+                }
+
+                #slideshow {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: relative;
+                }
+
+                #slideshow img {
+                    width: 300px;
+                    height: 300px;
+                    display: none; 
+                    margin-right: 10px;
+                }
+
+                #slideshow img#active {
+                    display: flex; 
+                }
+                .About-statement .text { 
+                        max-width: 800px;
+                        text-align: center;
+                        font-size: 20px;
+                        margin: 20px; 
+                        color: #ffffff; 
+                }
+                .stats { 
+                        margin-top: 100px;
+                        margin-bottom: 100px;
+                }
+                .stats .number { 
+                        display: flex; 
+                        flex-direction: column;
+                }
+                .stats .number .item{ 
+                        display: flex;
+                        width: 100%; 
+                        justify-content: space-between;
+                        font-size: 20px
+                }
+                @media only screen and (max-width: 720px) { 
+                    .stats { 
+                        max-width: 100%;
+                        margin: 10px 20px; 
+                    }
+                }
+                .Our-Team { 
+                        display: flex; 
+                        justify-content: space-around;
+                        width: 100%; 
+                }
+                .Our-Team img { 
+                        max-height: 350px; 
+                        max-width: 350px; 
+                        margin: 10px; 
+                }
+                .Emily p, .Alex p{ 
+                        max-width: 350px; 
+                        color: #000000; 
+                        text-align: center;
+                }
+                #emily, #alex { 
+                        font-size: large;
+                        font-weight: bold;
+                }
+                h3 { 
+                        margin-top: -10px;
+                }
+                @media only screen and (max-width: 1000px) { 
+                    .Our-Team { 
+                        flex-direction: column;
+                    }
+                    .Emily, .Alex { 
+                        display: flex;
+                        flex-direction: column;
+                        /* justify-content: center; */
+                        align-items: center;
+                    }
+                }
+                @media only screen and (max-width: 400px) { 
+                    .Our-Team img { 
+                        max-width: 250px; 
+                        max-height: 250px; 
+                    }
+                }
+                .newsletter { 
+                        margin-bottom: 200px;
+                        width: 80%; 
+                        min-height: 200px; 
+                        border: 5px #005701 outset; 
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #82653E;
+                        border-radius: 20px;
+                }
+                #newsletter { 
+                        display: flex;
+                        width: 60%; 
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                }
+                #name { 
+                        display: flex; 
+                }
+                #newsletter input[type="text"], #newsletter input[type="email"]{ 
+                        width: 100%; 
+                        height: 30px; 
+                        border-radius: 10px;
+                }
+                #newsletter input[type="submit"] { 
+                        width: 50%; 
+                        height: 30px; 
+                        border-radius: 10px;
+                }
+                #name-error, #email-error { 
+                        margin: 4px; 
+                        color: red; 
+                }
+                @media only screen and (max-width: 700px) { 
+                    #newsletter { 
+                        width: 80%; 
+                    }
+                }
+                                            @media only screen and (max-width:600px) {
+               .button {height:40px !important; font-size:15px !important; position:relative !important; width:31% !important; display:inline !important}
+               .button {padding-top:3% !important;}
+               .logo {width:96.2% !important; margin-left:1.8%;}
+               .button:first-child {top:0 !important; margin-top:0 !important}
+               .content {height:148vh !important; }
+               .navigation {top:0 !important; margin-left:1.75%}
+            }
+        </style>
+</head>
+<body>
+        <a href = "about.html"><div class = "logo"></div></a>
+        <div class = "navigation">
+            <div class = "active2 button">
+                <a href = "about.html" class = "active navlinks">About</a>
+            </div>
+            <div class = "button">
+                <a href = "mission.html" class = "navlinks">Mission</a>
+            </div>
+            <div class = "button">
+                <a href = "team.html" class = "navlinks">Team</a>
+            </div>
+            <div class = "button">
+                <a href = "locations.html" class = "navlinks">Locations</a>
+            </div>
+            <div class = "button">
+                <a href = "shop.html" class = "navlinks">Shop</a>
+            </div>
+            <div class = "button">
+                <a href = "contact.html" class = "navlinks">Contact</a>
+            </div>
+        </div>
+        <div class="container">
+                <script>
+                        function isScrolledIntoView(elem)
+                        {
+                                var docViewTop = $(window).scrollTop();
+                                var docViewBottom = docViewTop + $(window).height();
+
+                                var elemTop = $(elem).offset().top;
+                                var elemBottom = elemTop + $(elem).height();
+
+                                if((elemTop <= docViewBottom) && (elemTop >= docViewTop)) console.log("EHLLO"); 
+
+                                return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+                        }
+                </script>
+                <div class="content">
+                        <div class="title">
+                                <h1>About EcoEssence</h1>
+                        </div>
+    <script>
+        function slideShow() {
+            var $active = $('#slideshow .active');
+            var $next = ($active.next().length > 0) ? $active.next() : $('#slideshow img:first');
+
+
+            $next.css('z-index', 3);
+
+            $active.fadeOut(1500, function () {
+                $active.removeClass('active'); 
+                $active.css('z-index', 1).hide();
+                $next.addClass('active').css('z-index', 4).fadeIn(); 
+            });
+        }
+
+        $(document).ready(function () {
+            $('#slideshow img:first').addClass('active').show();
+            setInterval(slideShow, 7000);
+        });
+    </script>
+                        <div class="About-statement">
+                                <div class="text">
+                                        <p>
+                                        Welcome to EcoEssence, where fashion meets 
+                                        responsibility. At EcoEssence, we believe in the 
+                                        transformative power of ethical choices in fashion. 
+                                        Our mission is to redefine the way you experience 
+                                        clothing by offering a curated collection that 
+                                        seamlessly blends style with sustainability. 
+                                        EcoEssence is not just a clothing store; it's a 
+                                        commitment to ethical and eco-friendly practices. 
+                                        We recognize the environmental impact of the fashion 
+                                        industry and strive to make a positive difference. 
+                                        Our curated selection of clothing reflects our 
+                                        dedication to using ethically sourced materials, 
+                                        prioritizing fair labor practices, and minimizing 
+                                        our ecological footprint.
+                                        </p>
+                                        <p> 
+                                        EcoEssence is not just a brand; it's a movement. 
+                                        We invite you to not just shop but be part of a 
+                                        conscious movement. Explore our thoughtfully 
+                                        curated collection and join us in making a 
+                                        stylish statement that resonates with your values. 
+                                        Elevate your wardrobe with choices that matter – 
+                                        because at EcoEssence, fashion is more than just 
+                                        clothing; it's a conscious choice. Shop now and 
+                                        embrace a sustainable and stylish lifestyle that 
+                                        aligns with your values.
+                                        </p>
+                                </div>
+                                <div id="slideshow">
+                                        <img class="slide" src="images/clothes4.jpg">
+                                        <img class="slide" src="images/sustainable.jpg">
+                                        <img class="slide" src="images/clothes2.jpg">
+                                        <img class="slide" src="images/clothes3.jpg">
+                                </div>
+                        </div>
+                        <div class="stats">
+                                <h2> Through our efforts in following our mission, we have: </h2>
+                                <div class="number">
+                                        <section class="item">
+                                                <p> Reduced our carbon footprint by: </p>
+                                                <p><span id="footprint">50</span> %</p>
+                                        </section>
+                                        <section class="item"> 
+                                                <p> Saved in pounds, non-biodegradable plastic: </p>
+                                                <p><span id="plastic">200</span> Million</p>
+                                        </section>
+                                        <section class="item"> 
+                                                <p> Percent of our clothing ethically sourced: </p>
+                                                <p><span id="clothing">100</span> %</p>
+                                        </section>
+                                        <section class="item"> 
+                                                <p> Decreased Workload and Overtime by: </p>
+                                                <p><span id="work">66</span> %</p>
+                                        </section>
+                                </div>
+                        </div>
+                        <script>
+                                first = true; 
+                                function countUp(start, end, id, interval) { 
+                                        let step = end > start ?  1 : -1; 
+
+                                        if (start == end) { 
+                                                document.querySelector("#" + id).innerHTML = end; 
+                                                return; 
+                                        }
+
+                                        let counter = setInterval(function() { 
+                                                start += step; 
+                                                document.querySelector("#" + id).textContent = start; 
+
+                                                if (start == end) clearInterval(counter); 
+                                        }, interval); 
+                                }
+                                $(".content").on('scroll', function() {
+                                        if (isScrolledIntoView(".stats") && first == true) {
+                                                countUp(0, 50, "footprint", 30);
+                                                countUp(0, 200, "plastic", 10);
+                                                countUp(0, 100, "clothing", 20); 
+                                                countUp(0, 66, "work", 30); 
+                                                first = false; 
+                                        }
+                                });
+                        </script>
+                        <h2 id="founders-title"> Our Founders </h2>
+                        <div class="Our-Team">
+                                <section class="Emily">
+                                        <img src="images/woman.jpg">
+                                        <p id="emily">Emily Harper</p>
+                                        <p>Emily Harper, EcoEssence co-founder, 
+                                        blends her background in environmental 
+                                        science and design to redefine fashion. 
+                                        Passionate about sustainability, Emily 
+                                        creates stylish, eco-friendly garments 
+                                        that reflect her commitment to transforming 
+                                        the industry. A speaker and advocate, she 
+                                        inspires others to embrace a greener, more 
+                                        ethical lifestyle.</p>
+                                </section>
+                                <section class="Alex">
+                                        <img src="images/man.jpg">
+                                        <p id="alex">Alexander "Alex" Mitchell</p>
+                                        <p>Meet Alexander "Alex" Mitchell, the 
+                                        strategic mind behind EcoEssence. With a 
+                                        business background and passion for social 
+                                        responsibility, Alex is dedicated to making a
+                                        positive impact in the world of sustainable 
+                                        fashion. His vision and commitment shape 
+                                        EcoEssence, driving it towards a future where 
+                                        conscious consumerism sets the standard.</p>
+                                </section>
+                        </div>
+                        <h2> Learn More About Us! </h2>
+                        <h3> Sign Up For Our Newsletter </h3>
+                        <div class="newsletter">
+                                <form onsubmit="return validate()" method="get" action="#" id="newsletter">
+                                        <input type="text" name="name" placeholder="Enter Your Name" id="name">
+                                        <p id="name-error"> </p>
+                                        <input type="email" name="email" placeholder="Enter Your Email @ domain.com" id="email">
+                                        <p id="email-error"> </p>
+                                        <input type="submit">
+                                </form>
+                                <script>
+                                        function validate() { 
+                                                goodForm = true; 
+                                                name = document.getElementById("name").value; 
+                                                if(name == "") { 
+                                                        document.getElementById("name").focus(); 
+                                                        document.getElementById("name-error").innerHTML = "Name is Required"; 
+                                                        goodForm = false; 
+                                                }
+                                                else { 
+                                                        document.getElementById("name-error").innerHTML = "";
+                                                }
+
+                                                email = document.getElementById("email").value; 
+                                                if(email == "") { 
+                                                        document.getElementById("email").focus(); 
+                                                        document.getElementById("email-error").innerHTML = "Email is Required"; 
+                                                        goodForm = false; 
+                                                }
+                                                else { 
+                                                        document.getElementById("email-error").innerHTML = "";
+                                                }
+
+                                                if(goodForm) { 
+                                                        alert("Thank You for Signing Up " + name); 
+                                                        document.getElementById("name").value = ""; 
+                                                        document.getElementById("email").value = ""; 
+                                                } 
+
+                                                return goodForm; 
+                                        }
+                                </script>
+                        </div>
+                </div>
+                <div class = "footer">
+                        <p id = "footertext">
+                            Est. 2024 <br />
+                            Connect on <a href = "https://www.instagram.com" target = "_blank">Instagram</a> | <a href = "https://twitter.com/?lang=en" target = "_blank">X</a> | <a href = "https://www.facebook.com" target = "_blank">Facebook</a>
+                        </p>
+                </div>
+        </div>
+
+        <!-- SOME SORT OF STATS DOWN HERE ??  -->
+        <!-- A NEWS LETTER SIGN UP. YES.  -->
+</body>
+</html>

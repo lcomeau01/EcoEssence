@@ -1,0 +1,216 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name = "keywords" content = "sustainable, clothing, environment, ecoessence, shop" />
+        <title>EcoEssense</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            table {
+                margin-left: auto;
+                margin-right: auto;
+                border-collapse: collapse;
+                width: 30vw;
+        }
+                td {
+                        border: 3px outset #82653E;
+                }
+                td:not:first-child {
+                        border-left: none;
+                }
+                #colheadings {
+                        background-color: #53774c;
+                        text-align: center;
+                }
+                #weare {
+                        font-size: 5vh;
+                }
+                #openorclosed {
+                        text-decoration: underline;
+                        text-decoration-color: #bc9c54;
+                }
+                ul {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                }
+                li {
+                        padding-top: 2vh;
+                        margin: 0;
+                }
+                #locationinfo {
+                        border: none;
+                        text-align: center;
+                }
+                td.locations {
+                        border: none;
+                        width: 20vw; 
+                }
+            @media only screen and (max-width: 1050px) {
+                div.footer {
+                    bottom: -21vh;
+                }
+            }
+            @media only screen and (max-width: 600px) {
+                table {
+                    width: 50vw;
+                }
+                td.locations {
+                    vertical-align: top;
+                    width: 25vw;
+                }
+            }
+
+            @media only screen and (max-width:600px) {
+               .button {height:40px !important; font-size:15px !important; position:relative !important; width:31% !important; display:inline !important}
+               .button {padding-top:3% !important;}
+               .logo {width:96.2% !important; margin-left:1.8%;}
+               .button:first-child {top:0 !important; margin-top:0 !important}
+               .content {height:148vh !important; }
+               .navigation {top:0 !important; margin-left:1.75%}
+            }
+            
+        </style>
+    </head>
+    <body>
+    <a href = "about.html"><div class = "logo"></div></a>
+    <div class = "navigation">
+            <div class = "button">
+                <a href = "about.html" class = "navlinks">About</a>
+            </div>
+            <div class = "button">
+                <a href = "mission.html" class = "navlinks">Mission</a>
+            </div>
+            <div class = "button">
+                <a href = "team.html" class = "navlinks">Team</a>
+            </div>
+            <div class = "active2 button">
+                <a href = "locations.html" class = "active navlinks">Locations</a>
+            </div>
+            <div class = "button">
+                <a href = "shop.html" class = "navlinks">Shop</a>
+            </div>
+            <div class = "button">
+                <a href = "contact.html" class = "navlinks">Contact</a>
+            </div>
+        </div>
+
+        <div class = "container">
+            <div class = "content" >
+                <h1>Locations and Store Hours</h1>
+                <h2>Store Hours</h2>
+                <table>
+                    <tr id = "colheadings">
+                        <td>Day of the Week</td>
+                        <td>Opening Time</td>
+                        <td>Closing Time</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>Closed</td>
+                        <td>Closed</td>
+                    </tr>
+                    <tr>
+                        <td>Monday</td>
+                        <td>10 am</td>
+                        <td>8 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>10 am</td>
+                        <td>8 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>10 am</td>
+                        <td>8 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>10 am</td>
+                        <td>8 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>10 am</td>
+                        <td>10 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>9 am</td>
+                        <td>10 pm</td>
+                    </tr>
+                </table>
+                <br />
+                <span id = "weare">We are <span id = "openorclosed">open!</span></span>
+                <script>
+                    var dateandtime = new Date();
+                    var dayofweek = dateandtime.getDay();
+                    var hour = dateandtime.getHours();
+                    
+                    function openOrClosed(dayofweek, hour) {
+                        if (dayofweek == 0) {
+                            return "Closed"
+                        }
+                        if (dayofweek == 1 || dayofweek == 2 || dayofweek == 3 || dayofweek == 4) {
+                            if (hour >= 10 && hour <= 20) {
+                                return "open!"
+                            } else {
+                                return "closed."
+                            }
+                        }
+                        if (dayofweek == 5) {
+                            if (hours >= 10 && hour <= 22) {
+                                return "open!"
+                            } else {
+                                return "closed."
+                            }
+                        }
+                        if (dayofweek == 6) {
+                            if (hours >= 9 && hour <= 22) {
+                                return "open!"
+                            } else {
+                                return "closed."
+                            }
+                        }
+                    }
+                    var openorclosed = document.getElementById("openorclosed");
+                    openorclosed.textContent = openOrClosed(dayofweek, hour);
+                </script>
+                <br />
+                <h2>Locations</h2>
+                <table id = "locationinfo" style="margin-bottom:100px">
+                    <tr>
+                        <td class = "locations">
+                            <ul>
+                                <li><span><strong>Baltimore</strong><br />15 North Ave</span></li>
+                        
+                                <li><span><strong>Boston</strong><br />6 Mass Ave</span></li>
+                        
+                                <li><span><strong>Cincinatti</strong><br />894 Abelia Ct</span></li>
+                            </ul>
+                        </td>
+                        <td class = "locations">
+                            <ul>
+                                <li><span><strong>Houston</strong><br />74 Thelma Ln</span></li>
+                        
+                                <li><span><strong>Philadelphia</strong><br />415 37th St</span></li>
+                        
+                                <li><span><strong>Seattle</strong><br />6 Denny Way</span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class = "footer">
+                <p id = "footertext">
+                    Est. 2024 <br />
+                    Connect on <a href = "https://www.instagram.com" target = "_blank">Instagram</a> | <a href = "https://twitter.com/?lang=en" target = "_blank">X</a> | <a href = "https://www.facebook.com" target = "_blank">Facebook</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
