@@ -16,14 +16,14 @@ Key Features: <br>
 
   ### Screenshots
   <div style="display: flex; flex-wrap: wrap; gap: 10px; max-width: 900px;">
-<img width="50%" alt="image" src="https://github.com/user-attachments/assets/93a5663d-d558-47f2-8fb1-cb93bc299bbc" />
-<img width="50%" alt="image" src="https://github.com/user-attachments/assets/aa31e003-c626-4183-9135-17c8c8538e68" />
-<img width="50%" alt="image" src="https://github.com/user-attachments/assets/4cec35fc-c6a7-4d33-8d7a-7c8e7c75b0d5" />
-<img width="50%" alt="image" src="https://github.com/user-attachments/assets/cb357fac-00d2-4abd-91fe-a45af7f6db93" />
-<img width="50%" alt="image" src="https://github.com/user-attachments/assets/8318510d-edbe-4d25-99d5-0d24b4e3a65a" />
-<img width="50%" alt="image" src="https://github.com/user-attachments/assets/8b7eb16f-c2ff-4669-9b59-243db6568f1d" />
-<img width="50%" alt="image" src="https://github.com/user-attachments/assets/8dad4c17-4e24-4174-870b-4ca4bef9e725" />
-<img width="50%" alt="image" src="https://github.com/user-attachments/assets/45edf4cf-1a83-44e8-a2a8-2ce299ca679f" />
+<img width="48%" alt="image" src="https://github.com/user-attachments/assets/93a5663d-d558-47f2-8fb1-cb93bc299bbc" />
+<img width="48%" alt="image" src="https://github.com/user-attachments/assets/aa31e003-c626-4183-9135-17c8c8538e68" />
+<img width="48%" alt="image" src="https://github.com/user-attachments/assets/4cec35fc-c6a7-4d33-8d7a-7c8e7c75b0d5" />
+<img width="48%" alt="image" src="https://github.com/user-attachments/assets/cb357fac-00d2-4abd-91fe-a45af7f6db93" />
+<img width="48%" alt="image" src="https://github.com/user-attachments/assets/8318510d-edbe-4d25-99d5-0d24b4e3a65a" />
+<img width="48%" alt="image" src="https://github.com/user-attachments/assets/8b7eb16f-c2ff-4669-9b59-243db6568f1d" />
+<img width="48%" alt="image" src="https://github.com/user-attachments/assets/8dad4c17-4e24-4174-870b-4ca4bef9e725" />
+<img width="48%" alt="image" src="https://github.com/user-attachments/assets/45edf4cf-1a83-44e8-a2a8-2ce299ca679f" />
 </div>
 
 <br> 
